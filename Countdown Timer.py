@@ -1,5 +1,4 @@
 import time
-import os
 import winsound
 
 def countdown(ars):
@@ -16,12 +15,11 @@ def countdown(ars):
         print(timer, end="\r")
         time.sleep(1)
         total_seconds -= 1
-    sound_file = "buzzer.wav"
-    os.name == "nt"
+    
     print("Time's up")
+    
+    sound_file = "buzzer.wav"
     winsound.PlaySound(sound_file, winsound.SND_FILENAME)
 
-
-
-
-countdown(input("Enter time in format HH:MM:SS ").split(":"))
+if __name__=="__main__":
+    countdown(input("Enter time in format HH:MM:SS ").split(":"))
